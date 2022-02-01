@@ -4,6 +4,7 @@
   gap: 1rem;
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: var(--general-shadow);
 
   &__icon {
     width: 3.3rem;
@@ -32,6 +33,7 @@
   border-radius: 1rem;
   position: relative;
   height: 15rem;
+  box-shadow: var(--general-shadow);
 
   &__icon {
     width: 4.3rem;
