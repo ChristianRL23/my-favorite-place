@@ -5,10 +5,16 @@ const AppContext = React.createContext({
   setPlacedMarker: () => {},
   placeFormData: '',
   setPlaceFormData: () => {},
+  markerPosition: '',
+  setMarkerPosition: () => {},
+  markers: '',
+  setMarkers: () => {},
 });
 
 export const AppContextProvider = ({ children }) => {
   const [placedMarker, setPlacedMarker] = useState(false);
+  const [markers, setMarkers] = useState([]);
+  const [markerPosition, setMarkerPosition] = useState(null);
   const [placeFormData, setPlaceFormData] = useState({
     name: '',
     category: '',
@@ -18,7 +24,16 @@ export const AppContextProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ placedMarker, setPlacedMarker, placeFormData, setPlaceFormData }}
+      value={{
+        markers,
+        setMarkers,
+        placedMarker,
+        setPlacedMarker,
+        placeFormData,
+        setPlaceFormData,
+        setMarkerPosition,
+        markerPosition,
+      }}
     >
       {children}
     </AppContext.Provider>

@@ -14,7 +14,14 @@ const Sidebar = () => {
 
   const addPlace = (e) => {
     e.preventDefault();
-    console.log(appCtx.placeFormData);
+    appCtx.setMarkers([
+      ...appCtx.markers,
+      {
+        placeName: appCtx.placeFormData.name,
+        lat: appCtx.markerPosition.lat,
+        lng: appCtx.markerPosition.lng,
+      },
+    ]);
   };
 
   const sidebarWelcome = (

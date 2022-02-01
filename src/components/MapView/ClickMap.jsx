@@ -1,28 +1,29 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { useMapEvents, Marker } from 'react-leaflet';
 import AppContext from '../../context/appContext';
 import icon from './icon';
 
 const ClickMap = () => {
-  const [markerPosition, setMarkerPosition] = useState(null);
-
   const appCtx = useContext(AppContext);
 
   // eslint-disable-next-line no-unused-vars
   const map = useMapEvents({
     click(e) {
       appCtx.setPlacedMarker(true);
-      setMarkerPosition({
+      appCtx.setMarkerPosition({
         lat: e.latlng.lat,
         lng: e.latlng.lng,
       });
     },
   });
 
-  return markerPosition === null ? null : (
+  return appCtx.markerPosition === null ? null : (
     <Marker
       icon={icon}
-      position={{ lat: markerPosition.lat, lng: markerPosition.lng }}
+      position={{
+        lat: appCtx.markerPosition.lat,
+        lng: appCtx.markerPosition.lng,
+      }}
     ></Marker>
   );
 
