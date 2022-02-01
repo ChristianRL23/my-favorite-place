@@ -12,6 +12,11 @@ import AppContext from '../../context/appContext';
 const Sidebar = () => {
   const appCtx = useContext(AppContext);
 
+  const addPlace = (e) => {
+    e.preventDefault();
+    console.log(appCtx.placeFormData);
+  };
+
   const sidebarWelcome = (
     <div className="sidebar__welcome">
       <h2 className="sidebar__welcome__title">¡Bienvenid@!</h2>
@@ -29,11 +34,20 @@ const Sidebar = () => {
   const sidebarAdd = (
     <div className="sidebar__add-place">
       <h2 className="sidebar__add-place__title">Agregar un lugar</h2>
-      <form className="sidebar__add-place__form">
-        <Input icon={name} placeholder="Nombre del lugar" />
-        <Input icon={category} placeholder="Categoría" />
-        <Input icon={favorite} placeholder="¿Por qué es un lugar favorito?" />
-        <Input icon={description} placeholder="Descripción" textarea />
+      <form onSubmit={addPlace} className="sidebar__add-place__form">
+        <Input fieldName="name" icon={name} placeholder="Nombre del lugar" />
+        <Input fieldName="category" icon={category} placeholder="Categoría" />
+        <Input
+          fieldName="favorite"
+          icon={favorite}
+          placeholder="¿Por qué es un lugar favorito?"
+        />
+        <Input
+          fieldName="description"
+          icon={description}
+          placeholder="Descripción"
+          textarea
+        />
         <Button textContent="Agregar" />
       </form>
     </div>
