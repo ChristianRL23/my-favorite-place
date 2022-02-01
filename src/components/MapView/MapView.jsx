@@ -1,9 +1,12 @@
 import { MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-const MapView = () => {
+const MapView = ({ currentPosition }) => {
   return (
-    <MapContainer center={{ lat: '51.52437', lng: '13.41053' }} zoom={13}>
+    <MapContainer
+      center={{ lat: currentPosition.latitude, lng: currentPosition.longitude }}
+      zoom={16}
+    >
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
