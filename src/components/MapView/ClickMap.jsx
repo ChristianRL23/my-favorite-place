@@ -8,6 +8,7 @@ const ClickMap = () => {
 
   const appCtx = useContext(AppContext);
 
+  // eslint-disable-next-line no-unused-vars
   const map = useMapEvents({
     click(e) {
       appCtx.setPlacedMarker(true);
