@@ -5,6 +5,7 @@ import favorite from './favorite.svg';
 import description from './description.svg';
 import name from './name.svg';
 import Input from '../../components/Input/Input';
+import Button from '../../components/Button/Button';
 
 const Sidebar = () => {
   return (
@@ -28,6 +29,7 @@ const Sidebar = () => {
           <Input icon={category} placeholder="Categoría" />
           <Input icon={favorite} placeholder="¿Por qué es un lugar favorito?" />
           <Input icon={description} placeholder="Descripción" textarea />
+          <Button textContent="Agregar" />
         </form>
       </div>
     </aside>
