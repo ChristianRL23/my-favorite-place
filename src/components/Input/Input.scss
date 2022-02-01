@@ -1,0 +1,56 @@
+.input {
+  background-color: var(--text-color);
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  &__icon {
+    width: 3.3rem;
+  }
+
+  &__input-element {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    border-left: 1px solid var(--primary-color);
+    padding-left: 1rem;
+    font-size: 1.7rem;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.textarea {
+  background-color: var(--text-color);
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  height: 15rem;
+
+  &__icon {
+    width: 4.3rem;
+    height: 4rem;
+    position: relative;
+    border-right: 1px solid var(--primary-color);
+    padding-right: 1rem;
+  }
+
+  &__textarea-element {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
