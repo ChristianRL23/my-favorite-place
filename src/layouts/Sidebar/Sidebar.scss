@@ -1,11 +1,12 @@
-.header {
-  height: 11vh;
+.sidebar {
+  width: 24%;
   background-color: var(--primary-color);
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
 }
 
 .logo {
-  width: 22rem;
+  width: 25rem;
+  margin: 2rem 0;
 }

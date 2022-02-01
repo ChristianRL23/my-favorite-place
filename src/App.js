@@ -1,12 +1,14 @@
 import './App.scss';
 import MapView from './components/MapView/MapView';
-import Header from './layouts/Header/Header';
+import Sidebar from './layouts/Sidebar/Sidebar';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MapView />
+      <div className="main-container">
+        <Sidebar />
+        <MapView />
+      </div>
     </div>
   );
 }
