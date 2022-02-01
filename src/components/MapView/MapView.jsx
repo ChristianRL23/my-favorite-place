@@ -1,8 +1,8 @@
-import { MapContainer, TileLayer, MapConsumer } from 'react-leaflet';
-import L from 'leaflet';
-import icon from './icon';
+import { MapContainer, TileLayer } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
+
+import ClickMap from './ClickMap';
 
 const MapView = ({ currentPosition }) => {
   return (
@@ -14,15 +14,7 @@ const MapView = ({ currentPosition }) => {
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
       />
-      <MapConsumer>
-        {(map) => {
-          map.on('click', (e) => {
-            const { lat, lng } = e.latlng;
-            L.marker([lat, lng], { icon }).addTo(map);
-          });
-          return null;
-        }}
-      </MapConsumer>
+      <ClickMap />
     </MapContainer>
   );
 };

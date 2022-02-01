@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AppContext = React.createContext({
   placedMarker: null,
+  setPlacedMarker: () => {},
 });
 
 export const AppContextProvider = ({ children }) => {
-  return <AppContext.Provider>{children}</AppContext.Provider>;
+  const [placedMarker, setPlacedMarker] = useState(false);
+
+  return (
+    <AppContext.Provider value={{ placedMarker, setPlacedMarker }}>
+      {children}
+    </AppContext.Provider>
+  );
 };
 
 export default AppContext;
