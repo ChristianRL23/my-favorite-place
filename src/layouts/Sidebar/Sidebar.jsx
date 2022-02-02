@@ -55,7 +55,10 @@ const Sidebar = () => {
           placeholder="Descripción"
           textarea
         />
-        <Button textContent="Agregar" />
+        <div className="sidebar__add-place__buttons">
+          <Button textContent="Agregar" color="green" />
+          <Button textContent="Cancelar" color="red" />
+        </div>
       </form>
     </div>
   );

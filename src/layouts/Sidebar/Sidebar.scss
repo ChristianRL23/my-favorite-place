@@ -41,6 +41,11 @@
         margin-bottom: 3rem;
       }
     }
+
+    &__buttons {
+      display: flex;
+      gap: 3rem;
+    }
   }
 }
 
