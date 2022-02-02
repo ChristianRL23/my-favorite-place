@@ -14,6 +14,7 @@ const Sidebar = () => {
 
   const addPlace = (e) => {
     e.preventDefault();
+    appCtx.setMarkerPosition(null);
     appCtx.setMarkers([
       ...appCtx.markers,
       {
