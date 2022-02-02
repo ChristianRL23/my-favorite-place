@@ -6,14 +6,32 @@ import description from './description.svg';
 import name from './name.svg';
 import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import AppContext from '../../context/appContext';
 
 const Sidebar = () => {
+  const [error, setError] = useState(null);
   const appCtx = useContext(AppContext);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setError(null);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [error]);
 
   const addPlace = (e) => {
     e.preventDefault();
+    setError(null);
+    if (
+      appCtx.placeFormData.category === '' ||
+      appCtx.placeFormData.description === '' ||
+      appCtx.placeFormData.favorite === '' ||
+      appCtx.placeFormData.name === ''
+    ) {
+      setError(true);
+      return;
+    }
     appCtx.setMarkerPosition(null);
     appCtx.setMarkers([
       ...appCtx.markers,
@@ -27,6 +45,7 @@ const Sidebar = () => {
 
   const cancelAddPlace = (e) => {
     e.preventDefault();
+    setError(null);
     appCtx.setPlacedMarker(false);
     appCtx.setMarkerPosition(null);
   };
@@ -62,6 +81,11 @@ const Sidebar = () => {
           placeholder="Descripción"
           textarea
         />
+        {error && (
+          <p className="sidebar__add-place__error-message">
+            Ningún campo debe estar vacío.
+          </p>
+        )}
         <div className="sidebar__add-place__buttons">
           <Button clickFn={addPlace} textContent="Agregar" color="green" />
           <Button clickFn={cancelAddPlace} textContent="Cancelar" color="red" />
