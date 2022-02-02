@@ -24,6 +24,12 @@ const Sidebar = () => {
     ]);
   };
 
+  const cancelAddPlace = (e) => {
+    e.preventDefault();
+    appCtx.setPlacedMarker(false);
+    appCtx.setMarkerPosition(null);
+  };
+
   const sidebarWelcome = (
     <div className="sidebar__welcome">
       <h2 className="sidebar__welcome__title">¡Bienvenid@!</h2>
@@ -56,8 +62,8 @@ const Sidebar = () => {
           textarea
         />
         <div className="sidebar__add-place__buttons">
-          <Button textContent="Agregar" color="green" />
-          <Button textContent="Cancelar" color="red" />
+          <Button clickFn={addPlace} textContent="Agregar" color="green" />
+          <Button clickFn={cancelAddPlace} textContent="Cancelar" color="red" />
         </div>
       </form>
     </div>
