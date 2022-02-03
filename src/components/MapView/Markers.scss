@@ -1,0 +1,21 @@
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: var(--secondary-color);
+}
+
+.leaflet-popup-close-button {
+  &:link,
+  &:visited {
+    color: var(--text-color) !important;
+    display: none;
+  }
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem;
+}
+
+.leaflet-popup-content {
+  color: var(--text-color);
+  font-size: 1.6rem;
+}

@@ -1,7 +1,6 @@
 import './Sidebar.scss';
 import logo from './logo.svg';
 import category from './category.svg';
-import favorite from './favorite.svg';
 import description from './description.svg';
 import name from './name.svg';
 import Input from '../../components/Input/Input';
