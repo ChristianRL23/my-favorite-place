@@ -7,12 +7,13 @@ import Markers from './Markers';
 import { useContext } from 'react';
 import AppContext from '../../context/appContext';
 
-const MapView = ({ currentPosition }) => {
+const MapView = () => {
   const appCtx = useContext(AppContext);
 
   return (
     <MapContainer
-      center={{ lat: currentPosition.latitude, lng: currentPosition.longitude }}
+      whenCreated={(map) => appCtx.setMapInstance(map)}
+      center={appCtx.centerMapCoords}
       zoom={16}
     >
       <TileLayer

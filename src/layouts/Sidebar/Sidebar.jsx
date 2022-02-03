@@ -52,6 +52,15 @@ const Sidebar = () => {
     appCtx.setMarkerPosition(null);
   };
 
+  const localatePlace = (marker) => {
+    const placeCoords = {
+      lat: marker.lat,
+      lng: marker.lng,
+    };
+    const map = appCtx.mapInstance;
+    map.flyTo(placeCoords, 16);
+  };
+
   const sidebarWelcome = (
     <div className="sidebar__welcome">
       <h2 className="sidebar__welcome__title">¡Bienvenid@!</h2>
@@ -100,6 +109,7 @@ const Sidebar = () => {
       <div className="sidebar__all-places__places">
         {appCtx.markers.map((marker) => (
           <Place
+            clickFn={() => localatePlace(marker)}
             name={marker.name}
             category={marker.category}
             description={marker.description}

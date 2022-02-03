@@ -1,28 +1,28 @@
 import './App.scss';
 import MapView from './components/MapView/MapView';
 import Sidebar from './layouts/Sidebar/Sidebar';
-import { useEffect, useState } from 'react';
-import { AppContextProvider } from './context/appContext';
+import { useContext, useEffect } from 'react';
+import AppContext from './context/appContext';
 
 function App() {
-  const [currentPosition, setCurrentPosition] = useState(false);
+  const appCtx = useContext(AppContext);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      setCurrentPosition({
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
+      appCtx.setCenterMapCoords({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
       });
     });
   }, []);
 
   return (
     <div className="App">
-      {currentPosition !== false && (
-        <AppContextProvider>
+      {appCtx.centerMapCoords !== null && (
+        <>
           <Sidebar />
-          <MapView currentPosition={currentPosition} />
-        </AppContextProvider>
+          <MapView />
+        </>
       )}
     </div>
   );

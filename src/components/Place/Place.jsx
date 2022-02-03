@@ -1,8 +1,8 @@
 import './Place.scss';
 
-const Place = ({ name, category, description }) => {
+const Place = ({ name, category, description, clickFn }) => {
   return (
-    <div className="place">
+    <div onClick={clickFn} className="place">
       <h6 className="place__name">{name}</h6>
       <h6 className="place__category">{category}</h6>
       <p>{description}</p>

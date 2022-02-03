@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useMapEvents, Marker } from 'react-leaflet';
+import { useMapEvents, Marker, useMap } from 'react-leaflet';
 import AppContext from '../../context/appContext';
 import icon from './icon';
 
