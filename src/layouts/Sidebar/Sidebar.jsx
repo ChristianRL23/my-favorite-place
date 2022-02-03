@@ -75,11 +75,6 @@ const Sidebar = () => {
         <Input fieldName="name" icon={name} placeholder="Nombre del lugar" />
         <Input fieldName="category" icon={category} placeholder="Categoría" />
         <Input
-          fieldName="favorite"
-          icon={favorite}
-          placeholder="¿Por qué es un lugar favorito?"
-        />
-        <Input
           fieldName="description"
           icon={description}
           placeholder="Descripción"
