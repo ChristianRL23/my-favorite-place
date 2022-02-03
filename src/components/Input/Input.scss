@@ -2,12 +2,12 @@
   background-color: var(--secondary-color);
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.9rem;
   border-radius: 1rem;
   box-shadow: var(--general-shadow);
 
   &__icon {
-    width: 3.3rem;
+    width: 3rem;
   }
 
   &__input-element {
@@ -42,7 +42,7 @@
   box-shadow: var(--general-shadow);
 
   &__icon {
-    width: 4.3rem;
+    width: 3.9rem;
     height: 4rem;
     position: relative;
     border-right: 1px solid var(--text-color);
