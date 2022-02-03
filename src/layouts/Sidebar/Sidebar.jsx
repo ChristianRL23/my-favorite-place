@@ -72,19 +72,22 @@ const Sidebar = () => {
     <div className="sidebar__add-place">
       <h2 className="sidebar__add-place__title">Agregar un lugar</h2>
       <form onSubmit={addPlace} className="sidebar__add-place__form">
-        <Input fieldName="name" icon={name} placeholder="Nombre del lugar" />
-        <Input fieldName="category" icon={category} placeholder="Categoría" />
-        <Input
-          fieldName="description"
-          icon={description}
-          placeholder="Descripción"
-          textarea
-        />
-        {error && (
-          <p className="sidebar__add-place__error-message">
-            Ningún campo debe estar vacío.
-          </p>
-        )}
+        <div className="sidebar__add-place__form__inputs">
+          <Input fieldName="name" icon={name} placeholder="Nombre del lugar" />
+          <Input fieldName="category" icon={category} placeholder="Categoría" />
+          <Input
+            fieldName="description"
+            icon={description}
+            placeholder="Descripción"
+            textarea
+          />
+          {error && (
+            <p className="sidebar__add-place__error-message">
+              Ningún campo debe estar vacío.
+            </p>
+          )}
+        </div>
+
         <div className="sidebar__add-place__buttons">
           <Button clickFn={addPlace} textContent="Agregar" color="green" />
           <Button clickFn={cancelAddPlace} textContent="Cancelar" color="red" />
