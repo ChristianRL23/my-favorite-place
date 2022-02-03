@@ -8,6 +8,7 @@ import Input from '../../components/Input/Input';
 import Button from '../../components/Button/Button';
 import { useContext, useState, useEffect } from 'react';
 import AppContext from '../../context/appContext';
+import Place from '../../components/Place/Place';
 
 const Sidebar = () => {
   const [error, setError] = useState(null);
@@ -41,6 +42,7 @@ const Sidebar = () => {
         lng: appCtx.markerPosition.lng,
       },
     ]);
+    appCtx.setPlacedMarker(false);
   };
 
   const cancelAddPlace = (e) => {
@@ -94,10 +96,23 @@ const Sidebar = () => {
     </div>
   );
 
+  let sidebarContent;
+
+  //If there are no markers and the main marker is not placed.
+  if (appCtx.markers.length === 0 && appCtx.placedMarker === false) {
+    sidebarContent = sidebarWelcome;
+    //When the main marker is placed.
+  } else if (appCtx.placedMarker) {
+    sidebarContent = sidebarAdd;
+    //When the main marker is not placed and there are one or more places added.
+  } else if (appCtx.placedMarker === false && appCtx.markers.length > 0) {
+    sidebarContent = <Place />;
+  }
+
   return (
     <aside className="sidebar">
       <img className="logo" src={logo} alt="App logo" />
-      {appCtx.placedMarker === false ? sidebarWelcome : sidebarAdd}
+      {sidebarContent}
     </aside>
   );
 };
