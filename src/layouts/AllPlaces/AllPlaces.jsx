@@ -22,6 +22,7 @@ const AllPlaces = () => {
         {appCtx.markers.map((marker) => (
           <Place
             clickFn={() => localatePlace(marker)}
+            key={marker.name + marker.category + marker.description[3]}
             name={marker.name}
             category={marker.category}
             description={marker.description}

@@ -9,7 +9,11 @@ const Markers = () => {
   const { markers } = appCtx;
 
   const allMarkers = markers.map((place) => (
-    <Marker position={{ lat: place.lat, lng: place.lng }} icon={icon}>
+    <Marker
+      key={place.name + place.lat}
+      position={{ lat: place.lat, lng: place.lng }}
+      icon={icon}
+    >
       <Popup>{place.name}</Popup>
     </Marker>
   ));
