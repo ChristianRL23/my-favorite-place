@@ -7,6 +7,7 @@
   color: var(--text-color);
   box-shadow: var(--general-shadow);
   cursor: pointer;
+  border-radius: 1rem;
 
   &--green {
     @extend .button;
