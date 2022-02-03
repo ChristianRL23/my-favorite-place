@@ -37,7 +37,9 @@ const Sidebar = () => {
     appCtx.setMarkers([
       ...appCtx.markers,
       {
-        placeName: appCtx.placeFormData.name,
+        name: appCtx.placeFormData.name,
+        category: appCtx.placeFormData.category,
+        description: appCtx.placeFormData.description,
         lat: appCtx.markerPosition.lat,
         lng: appCtx.markerPosition.lng,
       },
@@ -96,6 +98,21 @@ const Sidebar = () => {
     </div>
   );
 
+  const allPlaces = (
+    <div className="sidebar__all-places">
+      <h2 className="sidebar__all-places__title">Lugares favoritos</h2>
+      <div className="sidebar__all-places__places">
+        {appCtx.markers.map((marker) => (
+          <Place
+            name={marker.name}
+            category={marker.category}
+            description={marker.description}
+          />
+        ))}
+      </div>
+    </div>
+  );
+
   let sidebarContent;
 
   //If there are no markers and the main marker is not placed.
@@ -106,7 +123,7 @@ const Sidebar = () => {
     sidebarContent = sidebarAdd;
     //When the main marker is not placed and there are one or more places added.
   } else if (appCtx.placedMarker === false && appCtx.markers.length > 0) {
-    sidebarContent = <Place />;
+    sidebarContent = allPlaces;
   }
 
   return (

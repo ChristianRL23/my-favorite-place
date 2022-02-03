@@ -1,14 +1,11 @@
 import './Place.scss';
 
-const Place = ({ name, category }) => {
+const Place = ({ name, category, description }) => {
   return (
     <div className="place">
-      <h6 className="place__name">Place name</h6>
-      <h6 className="place__category">Category</h6>
-      <p>
-        Esta es una descripcion larga jajajajadjfasdjf adsjf kdsfj
-        asdfjsdajfldsf jds fdsfhds fh sdfhsdhfjasdhfjsfgsd
-      </p>
+      <h6 className="place__name">{name}</h6>
+      <h6 className="place__category">{category}</h6>
+      <p>{description}</p>
     </div>
   );
 };
