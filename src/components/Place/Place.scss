@@ -8,16 +8,15 @@
   font-weight: 500;
   padding: 1rem;
 
+  &__category {
+    font-size: 1.7rem;
+    font-weight: inherit;
+    color: var(--tertiary-color);
+  }
+
   &__name {
     font-size: 2.5rem;
     font-weight: inherit;
-  }
-
-  &__category {
-    font-size: 2rem;
-    font-weight: inherit;
-    margin-bottom: 0.5rem;
-    color: var(--tertiary-color);
   }
 
   &__description {
