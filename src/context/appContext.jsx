@@ -13,6 +13,7 @@ const AppContext = React.createContext({
   setCenterMapCoords: () => {},
   mapInstance: '',
   setMapInstance: () => {},
+  cleanForm: () => {},
 });
 
 export const AppContextProvider = ({ children }) => {
@@ -26,6 +27,14 @@ export const AppContextProvider = ({ children }) => {
     category: '',
     description: '',
   });
+
+  const cleanForm = () => {
+    setPlaceFormData({
+      name: '',
+      category: '',
+      description: '',
+    });
+  };
 
   return (
     <AppContext.Provider
@@ -42,6 +51,7 @@ export const AppContextProvider = ({ children }) => {
         setCenterMapCoords,
         mapInstance,
         setMapInstance,
+        cleanForm,
       }}
     >
       {children}

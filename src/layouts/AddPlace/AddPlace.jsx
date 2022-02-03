@@ -33,6 +33,7 @@ const AddPlace = ({ error, setError }) => {
       },
     ]);
     appCtx.setPlacedMarker(false);
+    appCtx.cleanForm();
   };
 
   const cancelAddPlace = (e) => {
@@ -40,6 +41,7 @@ const AddPlace = ({ error, setError }) => {
     setError(null);
     appCtx.setPlacedMarker(false);
     appCtx.setMarkerPosition(null);
+    appCtx.cleanForm();
   };
 
   return (
