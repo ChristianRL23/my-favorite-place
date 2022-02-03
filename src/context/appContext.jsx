@@ -18,7 +18,6 @@ export const AppContextProvider = ({ children }) => {
   const [placeFormData, setPlaceFormData] = useState({
     name: '',
     category: '',
-    favorite: '',
     description: '',
   });
 

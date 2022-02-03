@@ -27,7 +27,6 @@ const Sidebar = () => {
     if (
       appCtx.placeFormData.category === '' ||
       appCtx.placeFormData.description === '' ||
-      appCtx.placeFormData.favorite === '' ||
       appCtx.placeFormData.name === ''
     ) {
       setError(true);
