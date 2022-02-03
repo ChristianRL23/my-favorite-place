@@ -14,13 +14,13 @@
   }
 
   &__category {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: inherit;
     margin-bottom: 0.5rem;
     color: var(--tertiary-color);
   }
 
-  p {
-    font-size: 1.4rem;
+  &__description {
+    font-size: 1.5rem;
   }
 }
