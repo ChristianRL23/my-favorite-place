@@ -1,0 +1,21 @@
+@import './../../shared';
+
+.welcome {
+  color: var(--text-color);
+  height: 100%;
+  position: relative;
+
+  &__title {
+    @include sidebarTitle;
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+    text-align: center;
+    &:last-child {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
