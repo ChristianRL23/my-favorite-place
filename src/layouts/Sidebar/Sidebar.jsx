@@ -1,3 +1,4 @@
+import locationIcon from './location.svg';
 import './Sidebar.scss';
 import logo from './logo.svg';
 import { useContext, useState, useEffect } from 'react';
@@ -30,8 +31,29 @@ const Sidebar = () => {
     sidebarContent = <AllPlaces />;
   }
 
+  const getCurrentLocation = () => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const location = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        const map = appCtx.mapInstance;
+        map.flyTo(location, 15);
+      },
+      () =>
+        alert(
+          'Your location cannot be found, please accept the permissions, change your device settings to access your location, or try again.'
+        )
+    );
+  };
+
   return (
     <aside className="sidebar">
+      <div onClick={getCurrentLocation} className="sidebar__location">
+        <h6>Get current location</h6>
+        <img src={locationIcon} alt="Location icon" />
+      </div>
       <img className="logo" src={logo} alt="App logo" />
       {sidebarContent}
     </aside>

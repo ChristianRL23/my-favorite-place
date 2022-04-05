@@ -9,8 +9,6 @@ const AppContext = React.createContext({
   setMarkerPosition: () => {},
   markers: '',
   setMarkers: () => {},
-  centerMapCoords: '',
-  setCenterMapCoords: () => {},
   mapInstance: '',
   setMapInstance: () => {},
   cleanForm: () => {},
@@ -19,7 +17,6 @@ const AppContext = React.createContext({
 export const AppContextProvider = ({ children }) => {
   const [placedMarker, setPlacedMarker] = useState(false);
   const [markers, setMarkers] = useState([]);
-  const [centerMapCoords, setCenterMapCoords] = useState(null);
   const [mapInstance, setMapInstance] = useState(null);
   const [markerPosition, setMarkerPosition] = useState(null);
   const [placeFormData, setPlaceFormData] = useState({
@@ -47,8 +44,6 @@ export const AppContextProvider = ({ children }) => {
         setPlaceFormData,
         setMarkerPosition,
         markerPosition,
-        centerMapCoords,
-        setCenterMapCoords,
         mapInstance,
         setMapInstance,
         cleanForm,

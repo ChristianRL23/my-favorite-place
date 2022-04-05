@@ -65,8 +65,8 @@ const AddPlace = ({ error, setError }) => {
         </div>
 
         <div className="add-place__buttons">
-          <Button clickFn={addPlace} textContent="Agregar" color="green" />
-          <Button clickFn={cancelAddPlace} textContent="Cancelar" color="red" />
+          <Button clickFn={addPlace} textContent="Add" color="green" />
+          <Button clickFn={cancelAddPlace} textContent="Cancel" color="red" />
         </div>
       </form>
     </div>
