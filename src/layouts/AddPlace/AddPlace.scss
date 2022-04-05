@@ -29,8 +29,9 @@
   }
 
   &__error-message {
-    color: var(--red-color);
-    font-size: 2.2rem;
+    color: red;
+    font-weight: 500;
+    font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
   }

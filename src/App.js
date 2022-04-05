@@ -18,12 +18,10 @@ function App() {
 
   return (
     <div className="App">
-      {appCtx.centerMapCoords !== null && (
-        <>
-          <Sidebar />
-          <MapView />
-        </>
-      )}
+      <>
+        <Sidebar />
+        <MapView />
+      </>
     </div>
   );
 }

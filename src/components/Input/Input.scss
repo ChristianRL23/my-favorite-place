@@ -3,11 +3,10 @@
   display: flex;
   gap: 1rem;
   padding: 0.9rem;
-  border-radius: 1rem;
-  box-shadow: var(--general-shadow);
+  border-radius: 0.5rem;
 
   &__icon {
-    width: 3rem;
+    width: 2.5rem;
   }
 
   &__input-element {
@@ -17,7 +16,7 @@
     border: none;
     border-left: 1px solid var(--text-color);
     padding-left: 1rem;
-    font-size: 1.7rem;
+    font-size: 1.35rem;
     font-family: inherit;
 
     &:focus {
@@ -25,7 +24,7 @@
     }
 
     &::placeholder {
-      color: var(--text-color);
+      color: rgb(176, 176, 176);
     }
   }
 }
@@ -39,10 +38,9 @@
   border-radius: 1rem;
   position: relative;
   height: 15rem;
-  box-shadow: var(--general-shadow);
 
   &__icon {
-    width: 3.9rem;
+    width: 3.5rem;
     height: 4rem;
     position: relative;
     border-right: 1px solid var(--text-color);
@@ -54,7 +52,7 @@
     color: var(--text-color);
     width: 100%;
     border: none;
-    font-size: 1.7rem;
+    font-size: 1.35rem;
     font-family: inherit;
     resize: none;
 
@@ -63,7 +61,7 @@
     }
 
     &::placeholder {
-      color: var(--text-color);
+      color: rgb(176, 176, 176);
     }
   }
 }

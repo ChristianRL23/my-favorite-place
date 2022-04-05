@@ -46,20 +46,20 @@ const AddPlace = ({ error, setError }) => {
 
   return (
     <div className="add-place">
-      <h2 className="add-place__title">Agregar un lugar</h2>
+      <h2 className="add-place__title">Add a place</h2>
       <form onSubmit={addPlace} className="add-place__form">
         <div className="add-place__form__inputs">
-          <Input fieldName="name" icon={name} placeholder="Nombre del lugar" />
-          <Input fieldName="category" icon={category} placeholder="Categoría" />
+          <Input fieldName="name" icon={name} placeholder="Name of the place" />
+          <Input fieldName="category" icon={category} placeholder="Category" />
           <Input
             fieldName="description"
             icon={description}
-            placeholder="Descripción"
+            placeholder="Description"
             textarea
           />
           {error && (
             <p className="add-place__error-message">
-              Ningún campo debe estar vacío.
+              All fields must be filled.
             </p>
           )}
         </div>

@@ -1,12 +1,12 @@
 @import './../../shared';
 
 .sidebar {
-  width: 35%;
+  width: 30%;
   background-color: var(--primary-color);
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 3rem;
 }
 
 .logo {

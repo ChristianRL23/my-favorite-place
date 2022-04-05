@@ -13,8 +13,8 @@ const MapView = () => {
   return (
     <MapContainer
       whenCreated={(map) => appCtx.setMapInstance(map)}
-      center={appCtx.centerMapCoords}
-      zoom={16}
+      center={{ lat: 20.5822809, lng: -100.3911078 }}
+      zoom={13}
     >
       <TileLayer
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"

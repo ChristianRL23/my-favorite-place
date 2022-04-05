@@ -17,7 +17,7 @@ const AllPlaces = () => {
 
   return (
     <div className="all-places">
-      <h2 className="all-places__title">Lugares favoritos</h2>
+      <h2 className="all-places__title">Favorite places</h2>
       <div className="all-places__places">
         {appCtx.markers.map((marker) => (
           <Place

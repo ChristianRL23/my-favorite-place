@@ -1,7 +1,7 @@
 .place {
   padding-bottom: 0;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   color: var(--text-color);
   background-color: var(--secondary-color);
   cursor: pointer;
@@ -9,17 +9,19 @@
   padding: 1rem;
 
   &__category {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: inherit;
     color: var(--tertiary-color);
   }
 
   &__name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: inherit;
+    margin-bottom: 1rem;
   }
 
   &__description {
     font-size: 1.5rem;
+    font-weight: 300;
   }
 }
