@@ -10,6 +10,12 @@
   &__title {
     @include sidebarTitle;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: 600px) {
+      text-align: left;
+      margin-top: 5rem;
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__places {
@@ -19,6 +25,10 @@
     flex-direction: column;
     gap: 1.5rem;
     padding-right: 1rem;
+
+    @media screen and (max-width: 900px) {
+      max-height: 30rem;
+    }
 
     &::-webkit-scrollbar {
       background-color: transparent;
