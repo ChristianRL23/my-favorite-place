@@ -39,6 +39,10 @@
   position: relative;
   height: 15rem;
 
+  @media screen and (max-width: 900px) {
+    height: 10rem;
+  }
+
   &__icon {
     width: 3.5rem;
     height: 4rem;

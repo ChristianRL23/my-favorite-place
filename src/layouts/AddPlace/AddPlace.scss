@@ -9,6 +9,12 @@
   &__title {
     @include sidebarTitle;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: 600px) {
+      text-align: left;
+      margin-top: 5rem;
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__form {
@@ -34,10 +40,18 @@
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: center;
+
+    @media screen and (max-width: 900px) {
+      margin-bottom: 0;
+    }
   }
 
   &__buttons {
     display: flex;
     gap: 3rem;
+
+    @media screen and (max-width: 900px) {
+      margin: 0 !important;
+    }
   }
 }
