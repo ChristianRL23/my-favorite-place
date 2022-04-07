@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive';
 import locationIcon from './location.svg';
 import './Sidebar.scss';
 import logo from './logo.svg';
@@ -10,6 +11,9 @@ import AllPlaces from '../AllPlaces/AllPlaces';
 const Sidebar = () => {
   const appCtx = useContext(AppContext);
   const [error, setError] = useState(null);
+  const isPhone = useMediaQuery({
+    query: '(max-width: 450px)',
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -51,7 +55,7 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div onClick={getCurrentLocation} className="sidebar__location">
-        <h6>Get current location</h6>
+        {!isPhone && <h6>Get current location</h6>}
         <img src={locationIcon} alt="Location icon" />
       </div>
       <img className="logo" src={logo} alt="App logo" />

@@ -8,14 +8,37 @@
   &__title {
     @include sidebarTitle;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 600px) {
+      text-align: left;
+      margin-top: 5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__paragraph {
     font-size: 1.8rem;
     text-align: center;
+
+    @media screen and (max-width: 600px) {
+      text-align: left;
+    }
     &:last-child {
       position: absolute;
       bottom: 0;
+
+      @media screen and (max-width: 900px) {
+        margin-top: 3rem;
+        position: initial;
+      }
+
+      @media screen and (max-width: 800px) {
+        margin-top: 2rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
