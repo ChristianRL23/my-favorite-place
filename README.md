@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+<h1 align="center">My Favorite Place</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
 
-## Available Scripts
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" >
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" >
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" >
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" >    
+  <img src="https://camo.githubusercontent.com/89388243b66ad4764aa92f48c090cfd57a8f79d0f906ccdda21e7277d928cf4c/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d4c6561666c657426636f6c6f723d313939393030266c6f676f3d4c6561666c6574266c6f676f436f6c6f723d464646464646266c6162656c3d" >
+    
+  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" >
+  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" > 
 
-In the project directory, you can run:
+</p>
 
-### `npm start`
+*<p align="center">All your favorite places in one place.</p>*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<p float="left">
+  <img src="/images/welcome.jpg" width="700" >
+  <img src="/images/add.jpg" width="700" >
+  <img src="/images/responsive.jpg" width="700" >
+</p>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h2>Table of contents</h2>
+<ul>
+  <li> <a href="#demo">Demo</a></li>
+  <li> <a href="#general-info">General info</a></li>
+  <li> <a href="#technologies-used">Technologies used</a></li>
+  <li> <a href="#features">Features</a></li>
+  <li> <a href="#installation">Installation</a></li>
+</ul>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h3 id="demo">Demo</h3>
+The app is ready to be used: https://myfavoriteplace.netlify.app
 
-### `npm run eject`
+<h3 id="general-info">General info</h3>
+Would you like to have all your favorite places in one place? Use my favorite place, an application where you can add your favorite places by placing markers on a map of your city. The starting location is the beautiful city of the developer, Queretaro in Mexico, but if you prefer, you can scroll the map or use the "Get current location" function to move the map to where you are thanks to the browser's Geolocation API.
+<h3 id="technologies-used">Technologies used</h3>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>  
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>  
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation">Geolocation API</a></li>
+      <li><a href="https://leafletjs.com/SlavaUkraini/">Leaflet</a></li></ul>
+    </ul>
+  <li><a href="https://reactjs.org/">React</a></li>
+    <ul>
+      <li><a href="https://reactjs.org/docs/hooks-intro.html">Hooks</a></li>
+      <li><a href="https://reactjs.org/docs/hooks-custom.html">Context API</a></li>
+      <li><a href="https://react-leaflet.js.org/">React Leaflet</a></li>
+      <li><a href="https://www.npmjs.com/package/react-responsive">React Responsive</a></li>
+    </ul>
+  <li><a href="https://sass-lang.com/">SASS / SCSS</a></li>
+  <li><a href="https://git-scm.com/">Git</a></li>
+</ul>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h3 id="features">Features</h3>
+<ul>
+  <li>Use of a <a href="https://leafletjs.com/SlavaUkraini/">Lefleat</a> map.</li>
+  <li>Get the user's current location using the browser's Geolocation API.</li>
+  <li>Add a favorite place.</li>
+  <li>Form validation.</li>
+  <li>Place markers on the map.</li>
+  <li>See all the favorite places listed and show their location on the map if they are clicked.</li>
+  <li>Show a popup with the place name if a map marker is clicked.</li>
+  <li>Use of Context API for better state management.</li>
+  <li>Responsive design.</li>
+</ul>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h3 id="installation">Installation</h3>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository
+   ```sh
+    git clone https://github.com/ChristianRL23/my-favorite-place.git
+   ```
+2. Go into the repository
+   ```sh
+   cd my-favorite-place
+   ```
+3. Install dependencies
+   ```sh
+   npm install
+   ```
+4. Run the app
+   ```sh
+   npm start
+   ```
+---
+<p align="center">
+  <a href="https://restcountries.com/">Portfolio</a> &nbsp;&middot;&nbsp;
+  <a href="https://restcountries.com/">LinkedIn</a> &nbsp;&middot;&nbsp;
+  <a href="https://restcountries.com/">Email</a> &nbsp;&middot;&nbsp;
+  <a href="https://restcountries.com/">GitHub</a>   
+</p>
