@@ -96,8 +96,6 @@ Would you like to have all your favorite places in one place? Use my favorite pl
    ```
 ---
 <p align="center">
-  <a href="https://restcountries.com/">Portfolio</a> &nbsp;&middot;&nbsp;
-  <a href="https://restcountries.com/">LinkedIn</a> &nbsp;&middot;&nbsp;
-  <a href="https://restcountries.com/">Email</a> &nbsp;&middot;&nbsp;
-  <a href="https://restcountries.com/">GitHub</a>   
+  <a href="https://christianramirezlara.com">Portfolio</a> &nbsp;&middot;&nbsp;
+  <a href="https://www.linkedin.com/in/christianramirezlara">LinkedIn</a>
 </p>
